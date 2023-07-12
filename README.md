@@ -1,13 +1,26 @@
-# nmc_website_app
+# nmc_app
 
-This is a weather website flutter app, which uses [flet](https://github.com/flet-dev/flet)
+将免费天气数据网站用Flutter重构成为支持多平台的app
 
-To run the app install flet module:
+## 进行中
+- 基础结构()
 
-```pip install flet```
+## 待开始
+- 省列表
+- 市列表
+- 气象站列表
+- 历史天气
+- 未来天气
+- 实时天气
+- 定制主页
+- 免费接口页
+- 数据服务页
 
-and run the program:
 
-```python main.py```
+## 
 
+![](https://files.flutter-io.cn/flutter-cn/landing/ec64036b4eacc9f3fd73.svg)
+- [Flutter](https://flutter.cn/)
 
+  ![](https://dart.cn/assets/img/shared/dart/logo+text/horizontal/white.svg)
+- [Dart](https://dart.cn)
