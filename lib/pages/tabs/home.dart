@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../city.dart';
+import '../station.dart';
 
 // 自定义组件
 class HomePage extends StatefulWidget {
@@ -42,19 +43,41 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: Center(child: Column(
-        // 使其位于正中位置
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [ElevatedButton(onPressed: () {
-          // 跳转路由
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (BuildContext context) {
-                return CityPage();
-              })
-          );
-        }, child: Text("跳转到城市页面"))
-        ],
-      ),),
+      body: Center(
+        child: Column(
+          // 使其位于正中位置
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // ElevatedButton(
+            //     onPressed: () {
+            //       // 跳转路由
+            //       Navigator.of(context)
+            //           .push(MaterialPageRoute(builder: (BuildContext context) {
+            //         return const CityPage(cityName: "上海", stationId: "11111111111");
+            //       }));
+            //     },
+            //     child: Text("基本路由跳转")),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  // 跳转路由
+                  Navigator.pushNamed(context, "/city_list");
+                },
+                child: const Text("命名路由跳转")),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  // 跳转路由
+                  Navigator.pushNamed(context, "/city_list",arguments: {"name":"新乡","stationid":2000000});
+                },
+                child: const Text("命名路由传值")),
+          ],
+        ),
+      ),
     );
   }
 }
