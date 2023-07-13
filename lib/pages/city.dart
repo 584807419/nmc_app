@@ -31,9 +31,18 @@ class _CityPage extends State<CityPage> {
         // child: Text("城市列表页内容:气象站id${widget.stationId}"),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [ElevatedButton(onPressed: (){Navigator.pushNamed(context, "/station_detail");},
-              child:const Text("跳转到气象站详情")
-          )],
+          children: [
+            ElevatedButton(onPressed: (){Navigator.pushNamed(context, "/station_detail");},
+                child:const Text("跳转到气象站详情")
+            ),
+            const SizedBox(height: 20,),
+            ElevatedButton(onPressed: (){Navigator.of(context).pop();},
+                child:const Text("返回上一级")
+            ),
+          const SizedBox(height: 20,),
+          ElevatedButton(onPressed: (){Navigator.of(context).pushReplacementNamed("/station_detail");},
+          child:const Text("替换路由,直接替换掉当前页面"))
+          ],
         ),
       ),
     );

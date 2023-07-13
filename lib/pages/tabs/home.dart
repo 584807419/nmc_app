@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
                 onPressed: () {
                   // 跳转路由
-                  Navigator.pushNamed(context, "/city_list");
+                  Navigator.pushNamed(context, "/city_list",arguments: {"name":"兴城","stationid":111});
                 },
                 child: const Text("命名路由跳转")),
             const SizedBox(

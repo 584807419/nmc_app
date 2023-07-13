@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       title: '天气app',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        appBarTheme: const AppBarTheme(centerTitle: true) // 标题全局居中
       ),
       // home: const HomePage(),
 
