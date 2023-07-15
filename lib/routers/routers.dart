@@ -10,7 +10,7 @@ import '../pages/station.dart';
 Map routes = {
   "/": (context) => const HomePage(),
   "/city_list": (context, {arguments}) => CityPage(arguments: arguments),
-  "/station_detail": (context) => const StationPage(),
+  "/station_detail": (context, {arguments}) => StationPage(arguments: arguments),
 };
 
 // 2. 配置onGenerateRoute固定写法,这个方法也相当于一个中间件,这里可以字权限判断
