@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'dart:convert' show json;
+import '../../config/url_config.dart';
 
 // 自定义组件
 class HomePage extends StatefulWidget {
@@ -15,10 +16,8 @@ class _HomePageState extends State<HomePage> {
   List<Widget> provinceList = [];
 
   void getHttp() async {
-    if (kDebugMode) {
-      print("发送请求 http://localhost:81/province");
-    }
-    Response response = await Dio().get('http://localhost:81/province');
+    print(ProvinceUrl);
+    Response response = await Dio().get(ProvinceUrl);
     List tempList = [];
 
     tempList = json.decode(response.toString())["data"]["list"];
