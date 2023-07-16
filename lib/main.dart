@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import './routers/routers.dart';
+import 'package:yako_theme_switch/yako_theme_switch.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MainApp());
 }
 
-class MyApp extends StatelessWidget {
+class MainApp extends StatelessWidget {
 
 
-  const MyApp({Key? key}) : super(key: key);
+  const MainApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      darkTheme: ThemeData(scaffoldBackgroundColor: Colors.black),
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       //去掉debug图标
       title: '天气app',

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import '../../config/url_config.dart';
 
 // 城市列表页面
 class CityPage extends StatefulWidget {
@@ -22,10 +23,7 @@ class _CityPage extends State<CityPage> {
 
   void getHttp() async {
 
-    String cityUrl = "http://localhost:81/freeapi/v1/city?province_name="+"${widget.arguments['name']}";
-    if (kDebugMode) {
-      print("发送请求 ${cityUrl}");
-    }
+    String cityUrl = "$CityUrl?province_name=${widget.arguments['name']}";
     Response response = await Dio().get(cityUrl);
     List tempList = [];
 
